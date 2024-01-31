@@ -1,0 +1,130 @@
+@use "../abstracts/breakpoints" as *;
+
+:root {
+  //-------------------------------------
+  // Colours
+  //-------------------------------------
+
+  --c-orange: #ff7b7b;
+  --c-black: #242424;
+  --c-white: #fff;
+  --c-dark-grey: #6c6c6c;
+  --c-light-grey: #edf1f4;
+
+  --c-brand: var(--c-orange);
+  --c-text: var(--c-black);
+  --c-alt-text: var(--c-dark-grey);
+  --c-link: var(--c-brand);
+  --c-link-hover: var(--c-brand);
+  --c-background: var(--c-white);
+  --c-alt-background: var(--c-light-grey);
+  --c-highlight: var(--c-brand);
+
+  //-------------------------------------
+  // Font Faces
+  //-------------------------------------
+
+  --ff-body: "Roboto", sans-serif;
+  --ff-title: "Roboto", sans-serif;
+  --ff-subtitle: "Roboto", sans-serif;
+  --ff-link: "Roboto", sans-serif;
+  --ff-button: "Roboto", sans-serif;
+
+  //-------------------------------------
+  // Font Sizes
+  //-------------------------------------
+
+  --fs-h1: 40px;
+  --fs-h2: 35px;
+  --fs-h3: 20px;
+  --fs-h4: 12px;
+  --fs-body: 16px;
+  --fs-logo: 26px;
+  --fs-link: var(--fs-body);
+  --fs-button: 14px;
+  --fs-subtitle: 18px;
+
+  //-------------------------------------
+  // Letter Spacing
+  //-------------------------------------
+
+  --ls-h1: 0;
+  --ls-h2: 0;
+  --ls-h3: 0.12em;
+  --ls-h4: 0.2em;
+  --ls-body: 0;
+  --ls-link: var(--ls-body);
+  --ls-button: 0.12em;
+
+  //-------------------------------------
+  // Line Heights
+  //-------------------------------------
+
+  --lh-h1: normal;
+  --lh-h2: normal;
+  --lh-h3: normal;
+  --lh-h4: normal;
+  --lh-body: normal;
+  --lh-link: var(--lh-body);
+  --lh-button: var(--lh-body);
+  --lh-subtitle: 1.5;
+
+  //-------------------------------------
+  // Site Flow
+  //-------------------------------------
+
+  --site-padding: 70px 20px;
+  --site-padding-top: 70px;
+  --site-padding-bottom: 70px;
+  --gap: 35px;
+
+  @include screen(md) {
+    //-------------------------------------
+    // Font Sizes
+    //-------------------------------------
+
+    --fs-h1: 60px;
+    --fs-h2: 40px;
+    --fs-h3: 20px;
+    --fs-h4: 12px;
+    --fs-body: 16px;
+    --fs-logo: 26px;
+    --fs-link: var(--fs-body);
+    --fs-button: 14px;
+    --fs-subtitle: 20px;
+
+    //-------------------------------------
+    // Site Flow
+    //-------------------------------------
+
+    --site-padding: 80px 40px;
+    --site-padding-top: 80px;
+    --site-padding-bottom: 80px;
+    --gap: 50px;
+  }
+
+  @include screen(lg) {
+    //-------------------------------------
+    // Font Sizes
+    //-------------------------------------
+
+    --fs-h1: 70px;
+    --fs-h2: 50px;
+    --fs-h3: 20px;
+    --fs-h4: 12px;
+    --fs-body: 16px;
+    --fs-logo: 26px;
+    --fs-link: var(--fs-body);
+    --fs-button: 16px;
+    --fs-subtitle: 25px;
+
+    //-------------------------------------
+    // Site Flow
+    //-------------------------------------
+
+    --site-padding: 100px 112px;
+    --site-padding-top: 100px;
+    --site-padding-bottom: 100px;
+    --gap: 70px;
+  }
+}

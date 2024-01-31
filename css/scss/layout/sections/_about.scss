@@ -1,0 +1,155 @@
+@use "../../abstracts" as *;
+
+section#about {
+  .container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+    max-width: 1500px;
+    margin: 0 auto;
+
+    @include screen(md) {
+      gap: 100px;
+    }
+  }
+
+  .first-section,
+  .second-section {
+    display: flex;
+    flex-direction: column;
+    gap: 70px;
+
+    @include screen(md) {
+      gap: var(--gap);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .image-container {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      min-height: 75vw;
+
+      @include screen(md) {
+        min-height: 500px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 40%;
+        height: 40%;
+        border-top: 2px solid var(--c-brand);
+        border-right: 2px solid var(--c-brand);
+        top: -1em;
+        right: -1em;
+      }
+
+      img {
+        position: absolute;
+        width: 80%;
+        height: 90%;
+        right: 0;
+        top: 0;
+        object-fit: cover;
+
+        &.front-image {
+          height: 70%;
+          right: unset;
+          top: unset;
+          left: 0;
+          bottom: 0;
+          max-width: 600px;
+        }
+      }
+    }
+
+    .text-container {
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+      max-width: 550px;
+
+      @include screen(md) {
+        gap: 35px;
+      }
+
+      @include screen(lg) {
+        max-width: 500px;
+      }
+
+      h3 {
+        text-transform: unset;
+        letter-spacing: 0.05em;
+        font-size: 18px;
+      }
+
+      p {
+        color: var(--c-alt-text);
+      }
+
+      .button-container {
+        display: flex;
+        gap: 30px;
+
+        .button {
+          width: 50%;
+          max-width: 200px;
+          padding-left: 10px;
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .list {
+      ul {
+        li {
+          list-style-type: none;
+          color: var(--c-alt-text);
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 10px;
+            height: 10px;
+            background: var(--c-brand);
+            position: absolute;
+            top: 50%;
+            left: -1.5em;
+            transform: translateY(-50%) rotate(45deg);
+          }
+        }
+      }
+    }
+  }
+
+  .second-section {
+    flex-direction: column-reverse;
+
+    .text-container {
+      order: 2;
+    }
+
+    .image-container {
+      &::before {
+        border-left: 2px solid var(--c-brand);
+        border-right: none;
+        right: unset;
+        top: -1em;
+        left: -1em;
+      }
+      img {
+        left: 0;
+        top: 0;
+        right: unset;
+
+        &.front-image {
+          right: 0;
+          left: unset;
+          bottom: 0;
+        }
+      }
+    }
+  }
+}

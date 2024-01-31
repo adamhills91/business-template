@@ -1,0 +1,53 @@
+@use "../abstracts" as *;
+
+///--------------------------------------------------------------
+// - Global font formatting, styles and variables
+//--------------------------------------------------------------
+
+h1 {
+  font-family: var(--ff-title);
+  font-size: var(--fs-h1);
+  letter-spacing: var(--ls-h1);
+  line-height: var(--lh-h1);
+}
+
+h2 {
+  font-family: var(--ff-title);
+  font-size: var(--fs-h2);
+  letter-spacing: var(--ls-h2);
+  line-height: var(--lh-h2);
+}
+
+h3 {
+  font-family: var(--ff-subtitle);
+  font-size: var(--fs-h3);
+  letter-spacing: var(--ls-h3);
+  line-height: var(--lh-h3);
+  text-transform: uppercase;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: var(--ff-subtitle);
+  font-size: var(--fs-h4);
+  letter-spacing: var(--ls-h4);
+  line-height: var(--lh-h4);
+  text-transform: uppercase;
+}
+
+p,
+span {
+  font-family: var(--ff-body);
+  font-size: var(--fs-body);
+  letter-spacing: var(--ls-body);
+  line-height: var(--lh-body);
+  margin-bottom: 1em;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.bold {
+  font-weight: 700;
+}

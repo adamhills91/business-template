@@ -1,0 +1,12 @@
+{
+  "scripts": {
+    "build": "esbuild js/scripts.js --bundle --minify --outfile=dist/js/scripts.min.js --format=cjs",
+    "watch": "npm run build -- --watch"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.0"
+  },
+  "dependencies": {
+    "gsap": "^3.12.5"
+  }
+}

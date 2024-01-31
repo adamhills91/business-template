@@ -1,0 +1,34 @@
+@use "../../abstracts" as *;
+
+section#project-examples {
+  display: flex;
+  flex-direction: column;
+
+  @include screen(md) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+
+  .project {
+    &:last-of-type {
+      display: none;
+
+      @include screen(md) {
+        display: block;
+      }
+    }
+
+    .image-container {
+      width: 100%;
+      height: 100%;
+      aspect-ratio: 4/3;
+      max-height: 450px;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
