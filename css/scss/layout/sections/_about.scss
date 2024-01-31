@@ -13,16 +13,17 @@ section#about {
     }
   }
 
-  .first-section,
-  .second-section {
+  .about-section {
     display: flex;
     flex-direction: column;
     gap: 70px;
+    scroll-margin-top: 70px;
 
     @include screen(md) {
       gap: var(--gap);
       display: grid;
       grid-template-columns: 1fr 1fr;
+      scroll-margin-top: 150px;
     }
 
     .image-container {
@@ -122,32 +123,34 @@ section#about {
         }
       }
     }
-  }
 
-  .second-section {
-    flex-direction: column-reverse;
+    &:nth-of-type(even) {
+      flex-direction: column-reverse;
 
-    .text-container {
-      order: 2;
-    }
-
-    .image-container {
-      &::before {
-        border-left: 2px solid var(--c-brand);
-        border-right: none;
-        right: unset;
-        top: -1em;
-        left: -1em;
+      .text-container {
+        order: 2;
       }
-      img {
-        left: 0;
-        top: 0;
-        right: unset;
 
-        &.front-image {
-          right: 0;
-          left: unset;
-          bottom: 0;
+      .image-container {
+        &::before {
+          border-left: 2px solid var(--c-brand);
+          border-right: none;
+          right: unset;
+          top: -1em;
+          left: -1em;
+        }
+
+        img {
+          left: 0;
+          top: 0;
+          right: unset;
+
+          &.front-image {
+            right: 0;
+            left: unset;
+            top: unset;
+            bottom: 0;
+          }
         }
       }
     }

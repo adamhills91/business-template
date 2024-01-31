@@ -195,6 +195,7 @@ header {
       background: black;
       transform-origin: 10%;
       transition: 0.2s ease;
+      margin: 0;
 
       @include screen(md) {
         transform-origin: 2%;

@@ -13,20 +13,8 @@ section#team {
     }
 
     .team-cards {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: var(--gap);
-
-      @include screen(md) {
-        flex-direction: row;
-        justify-content: center;
-        gap: 20px;
-      }
-
-      @include screen(lg) {
-        gap: 35px;
-      }
+      max-width: 1200px;
+      margin: 0 auto;
 
       .card {
         display: grid;
@@ -34,6 +22,7 @@ section#team {
         background: var(--c-white);
         max-width: 450px;
         transition: 0.2s ease;
+        margin: 0 auto;
 
         .image-container {
           position: relative;
@@ -92,6 +81,7 @@ section#team {
           p {
             color: var(--c-alt-text);
             font-size: 18px;
+            line-height: 1.4;
           }
 
           p.job-title {

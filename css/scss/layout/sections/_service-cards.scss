@@ -28,6 +28,10 @@ section#services {
         gap: 35px;
       }
 
+      a {
+        color: currentColor;
+      }
+
       .card {
         display: grid;
         grid-template-rows: 1fr auto;
@@ -101,6 +105,14 @@ section#services {
             position: relative;
             margin-bottom: 35px;
 
+            @include screen(md) {
+              font-size: 16px;
+            }
+
+            @include screen(lg) {
+              font-size: var(--fs-h3);
+            }
+
             &::after {
               content: "";
               position: absolute;
@@ -116,6 +128,14 @@ section#services {
 
           p {
             color: var(--c-alt-text);
+
+            @include screen(md) {
+              font-size: 14px;
+            }
+
+            @include screen(lg) {
+              font-size: var(--fs-copy);
+            }
           }
         }
 

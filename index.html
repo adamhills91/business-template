@@ -1,318 +1,442 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Company Name | What They Do | Town/City</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Company Name | What They Do | Town/City</title>
-  <link rel="stylesheet" href="style.css" />
-</head>
-
-<body data-page="home">
-  <header>
-    <div class="site-logo">
-      <a href="/index.html">
-        <img src="assets/svg/logo.svg" alt="">
-        <span class="bold">LOGO</span>
-      </a>
-    </div>
-    <input type="checkbox" id="nav-toggle" class="nav-toggle">
-    <nav>
-      <ul>
-        <li><a href="/" class="active">Home</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-    <label for="nav-toggle" class="nav-toggle-label">
-      <div class="toggle-line"></div>
-      <div class="toggle-line"></div>
-      <div class="toggle-line"></div>
-    </label>
-  </header>
-  <main>
-    <section id="hero">
-      <div class="hero-content">
-        <h1>Main Keywords of What They Do, And Location If Needed</h1>
-        <p>
-          Talk about the other services they do with keywords and locations
-          where they serve. Try to make this 2-3 lines tall.
-        </p>
-        <a href="#" class="button">Main Call to Action</a>
+  <body data-page="home">
+    <header>
+      <div class="site-logo">
+        <a href="/index.html">
+          <img src="assets/svg/logo.svg" alt="" />
+          <span class="bold">LOGO</span>
+        </a>
       </div>
-    </section>
-    <section id="services">
-      <div class="container">
-        <div class="title-container">
-          <h4>What We Offer</h4>
-          <h2>Our Services</h2>
+      <input type="checkbox" id="nav-toggle" class="nav-toggle" />
+      <nav>
+        <ul>
+          <li><a href="/index.html" class="active">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+      <label for="nav-toggle" class="nav-toggle-label">
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+        <span class="toggle-line"></span>
+      </label>
+    </header>
+    <main>
+      <section id="hero">
+        <div class="hero-content">
+          <h1>Main Keywords of What They Do, And Location If Needed</h1>
+          <p>
+            Talk about the other services they do with keywords and locations
+            where they serve. Try to make this 2-3 lines tall.
+          </p>
+          <a href="#" class="button">Main Call to Action</a>
         </div>
-        <div class="service-cards">
-          <div class="card service-1">
-            <div class="image-container">
-              <img class="bg-img" src="assets/images/service-card1.jpg" alt="#" />
-              <div class="icon-container">
-                <img src="assets/svg/service-card-icon1.svg" alt="#" />
+      </section>
+      <section id="services">
+        <div class="container">
+          <div class="title-container">
+            <h4>What We Offer</h4>
+            <h2>Our Services</h2>
+          </div>
+          <div class="service-cards">
+            <div class="card service-1">
+              <div class="image-container">
+                <img
+                  class="bg-img"
+                  src="assets/images/service-card1.jpg"
+                  alt="#"
+                />
+                <div class="icon-container">
+                  <img src="assets/svg/service-card-icon1.svg" alt="#" />
+                </div>
+              </div>
+              <div class="text-container">
+                <h3>Service 1</h3>
+                <p>
+                  Talk about the service with keywords people will be searching
+                  for it by. Keep it 1-2 sentences.
+                </p>
+                <div class="circles-container">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
               </div>
             </div>
-            <div class="text-container">
-              <h3>Service 1</h3>
-              <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
-              </p>
-              <div class="circles-container">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
+            <div class="card service-2">
+              <div class="image-container">
+                <img
+                  class="bg-img"
+                  src="assets/images/service-card2.jpg"
+                  alt="#"
+                />
+                <div class="icon-container">
+                  <img src="assets/svg/service-card-icon2.svg" alt="#" />
+                </div>
+              </div>
+              <div class="text-container">
+                <h3>Service 2</h3>
+                <p>
+                  Talk about the service with keywords people will be searching
+                  for it by. Keep it 1-2 sentences.
+                </p>
+                <div class="circles-container">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
+              </div>
+            </div>
+            <div class="card service-3">
+              <div class="image-container">
+                <img
+                  class="bg-img"
+                  src="assets/images/service-card3.jpg"
+                  alt="#"
+                />
+                <div class="icon-container">
+                  <img src="assets/svg/service-card-icon3.svg" alt="#" />
+                </div>
+              </div>
+              <div class="text-container">
+                <h3>Service 3</h3>
+                <p>
+                  Talk about the service with keywords people will be searching
+                  for it by. Keep it 1-2 sentences.
+                </p>
+                <div class="circles-container">
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                  <div class="circle"></div>
+                </div>
               </div>
             </div>
           </div>
-          <div class="card service-2">
-            <div class="image-container">
-              <img class="bg-img" src="assets/images/service-card2.jpg" alt="#" />
-              <div class="icon-container">
-                <img src="assets/svg/service-card-icon2.svg" alt="#" />
-              </div>
-            </div>
-            <div class="text-container">
-              <h3>Service 2</h3>
-              <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
-              </p>
-              <div class="circles-container">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-              </div>
-            </div>
-          </div>
-          <div class="card service-3">
-            <div class="image-container">
-              <img class="bg-img" src="assets/images/service-card3.jpg" alt="#" />
-              <div class="icon-container">
-                <img src="assets/svg/service-card-icon3.svg" alt="#" />
-              </div>
-            </div>
-            <div class="text-container">
-              <h3>Service 3</h3>
-              <p>
-                Talk about the service with keywords people will be searching
-                for it by. Keep it 1-2 sentences.
-              </p>
-              <div class="circles-container">
-                <div class="circle"></div>
-                <div class="circle"></div>
-                <div class="circle"></div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
-    <section id="project-examples">
-      <div class="project">
-        <div class="image-container">
-          <img src="assets/images/project-example1.jpg" alt="#">
-        </div>
-      </div>
-      <div class="project">
-        <div class="image-container">
-          <img src="assets/images/project-example2.jpg" alt="#">
-        </div>
-      </div>
-      <div class="project">
-        <div class="image-container">
-          <img src="assets/images/project-example3.jpg" alt="#">
-        </div>
-      </div>
-      <div class="project">
-        <div class="image-container">
-          <img src="assets/images/project-example4.jpg" alt="#">
-        </div>
-      </div>
-    </section>
-    <section id="about">
-      <div class="container">
-        <div class="first-section">
-          <div class="text-container">
-            <h2>Title Describing Who They Are</h2>
-            <h3>Subtitle - Maybe a slogan or catchy phrase</h3>
-            <div class="copy-container">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, lectus vel convallis consectetur,
-                velit mi vehicula risus, sed pretium velit neque id orci. Vestibulum vitae nibh a nisl lobortis semper
-                ut
-                eget velit. Vestibulum quis eleifend quam.</p>
-
-              <p>Nam mattis, lectus vel convallis consectetur, velit mi vehicula risus, sed pretium velit neque id orci.
-                Vestibulum vitae nibh a nisl lobortis semper ut eget velit. Vestibulum quis eleifend quam. </p>
-            </div>
-            <div class="button-container">
-              <a href="#" class="button button-alt">Find Out More</a>
-              <a href="#" class="button">Contact</a>
-            </div>
-          </div>
+      </section>
+      <section id="project-examples">
+        <div class="project">
           <div class="image-container">
-            <img class="back-image" src="assets/images/service-card1.jpg" alt="">
-            <img class="front-image" src="assets/images/service-card2.jpg" alt="">
+            <img src="assets/images/project-example1.jpg" alt="#" />
+          </div>
+        </div>
+        <div class="project">
+          <div class="image-container">
+            <img src="assets/images/project-example2.jpg" alt="#" />
+          </div>
+        </div>
+        <div class="project">
+          <div class="image-container">
+            <img src="assets/images/project-example3.jpg" alt="#" />
+          </div>
+        </div>
+        <div class="project">
+          <div class="image-container">
+            <img src="assets/images/project-example4.jpg" alt="#" />
+          </div>
+        </div>
+      </section>
+      <section id="about">
+        <div class="container">
+          <div class="about-section">
+            <div class="text-container">
+              <h2>Title Describing Who They Are</h2>
+              <h3>Subtitle - Maybe a slogan or catchy phrase</h3>
+              <div class="copy-container">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  mattis, lectus vel convallis consectetur, velit mi vehicula
+                  risus, sed pretium velit neque id orci. Vestibulum vitae nibh
+                  a nisl lobortis semper ut eget velit. Vestibulum quis eleifend
+                  quam.
+                </p>
+
+                <p>
+                  Nam mattis, lectus vel convallis consectetur, velit mi
+                  vehicula risus, sed pretium velit neque id orci. Vestibulum
+                  vitae nibh a nisl lobortis semper ut eget velit. Vestibulum
+                  quis eleifend quam.
+                </p>
+              </div>
+              <div class="button-container">
+                <a href="#" class="button button-alt">Find Out More</a>
+                <a href="#" class="button">Contact</a>
+              </div>
+            </div>
+            <div class="image-container">
+              <img
+                class="back-image"
+                src="assets/images/service-card1.jpg"
+                alt=""
+              />
+              <img
+                class="front-image"
+                src="assets/images/service-card2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div class="about-section">
+            <div class="text-container">
+              <h2>Extra Content if Needed</h2>
+              <div class="copy-container">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+                  mattis, lectus vel convallis consectetur, velit mi vehicula
+                  risus, sed pretium velit neque id orci.
+                </p>
+              </div>
+
+              <div class="list">
+                <p><span class="bold">Example list:</span></p>
+                <ul>
+                  <li class="custom-bullet">List item example 1</li>
+                  <li class="custom-bullet">List item example 2</li>
+                  <li class="custom-bullet">List item example 3</li>
+                  <li class="custom-bullet">List item example 4</li>
+                </ul>
+              </div>
+
+              <div class="button-container">
+                <a href="#" class="button">View Services</a>
+              </div>
+            </div>
+            <div class="image-container">
+              <img
+                class="back-image"
+                src="assets/images/service-card1.jpg"
+                alt=""
+              />
+              <img
+                class="front-image"
+                src="assets/images/service-card2.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="reviews">
+        <div class="container">
+          <div class="title-container">
+            <h4>Reviews</h4>
+            <h2>What People Say About Us</h2>
           </div>
 
-        </div>
-        <div class="second-section">
-          <div class="text-container">
-            <h2>Extra Content if Needed</h2>
-            <div class="copy-container">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, lectus vel convallis consectetur,
-                velit mi vehicula risus, sed pretium velit neque id orci. </p>
-            </div>
+          <div class="reviews-container">
+            <!-- Slider main container -->
+            <div class="swiper reviews-swiper">
+              <!-- Additional required wrapper -->
+              <div class="swiper-wrapper">
+                <!-- Slides -->
+                <div class="swiper-slide">
+                  <div class="card review-1">
+                    <div class="review-text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam mattis, lectus vel convallis consectetur, velit mi
+                        vehicula risus, sed pretium velit neque id orci.
+                      </p>
+                      <p>
+                        Morbi aliquet purus vitae interdum aliquam. Proin quis
+                        augue eros. Ut quis ante et enim ultricies facilisis ac
+                        eu tortor. Maecenas vitae euismod libero. Fusce porta mi
+                        tempus mollis commodo.
+                      </p>
+                    </div>
+                    <div class="reviewer-container">
+                      <div class="image-container">
+                        <img src="assets/images/review-headshot.jpg" alt="" />
+                      </div>
+                      <div class="text-container">
+                        <p class="bold name">John Doe</p>
+                        <p class="occupation">Homeowner</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card review-2">
+                    <div class="review-text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam mattis, lectus vel convallis consectetur.
+                      </p>
+                      <p>
+                        Fusce feugiat maximus nunc, pharetra imperdiet elit
+                        pellentesque vel. Suspendisse et urna malesuada,
+                        suscipit erat non, tincidunt diam. Pellentesque justo
+                        metus, maximus et sodales sit amet, luctus et tortor
+                      </p>
+                    </div>
+                    <div class="reviewer-container">
+                      <div class="image-container">
+                        <img src="assets/images/review-headshot.jpg" alt="" />
+                      </div>
+                      <div class="text-container">
+                        <p class="bold name">John Doe</p>
+                        <p class="occupation">Homeowner</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card review-3">
+                    <div class="review-text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam mattis, lectus vel convallis consectetur, velit mi
+                        vehicula risus, sed pretium velit neque id orci.
+                      </p>
+                      <p>
+                        Donec tempor eleifend faucibus. Nulla finibus orci at
+                        efficitur ultricies. Donec luctus odio vitae enim
+                        tristique, mollis malesuada ex semper. Aenean orci
+                        augue, accumsan id iaculis id, commodo id erat. Nunc in
+                        velit id orci cursus ultrices.
+                      </p>
+                    </div>
+                    <div class="reviewer-container">
+                      <div class="image-container">
+                        <img src="assets/images/review-headshot.jpg" alt="" />
+                      </div>
+                      <div class="text-container">
+                        <p class="bold name">John Doe</p>
+                        <p class="occupation">Homeowner</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="card review4">
+                    <div class="review-text">
+                      <p>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Nam mattis, lectus vel convallis consectetur.
+                      </p>
+                      <p>
+                        Fusce feugiat maximus nunc, pharetra imperdiet elit
+                        pellentesque vel. Suspendisse et urna malesuada,
+                        suscipit erat non, tincidunt diam. Pellentesque justo
+                        metus, maximus et sodales sit amet, luctus et tortor
+                      </p>
+                    </div>
+                    <div class="reviewer-container">
+                      <div class="image-container">
+                        <img src="assets/images/review-headshot.jpg" alt="" />
+                      </div>
+                      <div class="text-container">
+                        <p class="bold name">John Doe</p>
+                        <p class="occupation">Homeowner</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="swiper-navigation">
+                <!-- If we need pagination -->
+                <div class="swiper-pagination"></div>
 
-            <div class="list">
-              <p><span class="bold">Example list:</span></p>
-              <ul>
-                <li class="custom-bullet">List item example 1</li>
-                <li class="custom-bullet">List item example 2</li>
-                <li class="custom-bullet">List item example 3</li>
-                <li class="custom-bullet">List item example 4</li>
+                <!-- If we need navigation buttons -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="footer-hero">
+        <div class="container">
+          <h2>Title About Getting in Touch Today</h2>
+          <p>
+            Tagline to get the user to visit the contact page and get in touch
+            or get a quote etc.
+          </p>
+          <a href="#" class="button">Contact Us</a>
+        </div>
+      </section>
+      <footer>
+        <div class="container">
+          <div class="logo">
+            <img src="assets/svg/logo.svg" alt="" />
+            <span class="bold">LOGO</span>
+          </div>
+          <div class="menus">
+            <div class="menu menu-1">
+              <span class="menu-title bold">Menu</span>
+              <ul class="footer-menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About Us</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Portfolio</a></li>
+                <li><a href="#">Contact</a></li>
               </ul>
             </div>
-
-            <div class="button-container">
-              <a href="#" class="button">View Services</a>
+            <div class="menu menu-2">
+              <span class="menu-title bold">Contact</span>
+              <ul class="footer-menu">
+                <li>
+                  <p>123 Example Street</p>
+                  <p>City EX4 MPL</p>
+                </li>
+                <li><a href="tel:01234567890">+44 1234 567 890</a></li>
+                <li>
+                  <a href="mailto:example@example.com">example@example.com</a>
+                </li>
+              </ul>
             </div>
           </div>
-          <div class="image-container">
-            <img class="back-image" src="assets/images/service-card1.jpg" alt="">
-            <img class="front-image" src="assets/images/service-card2.jpg" alt="">
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="reviews">
-      <div class="container">
-        <div class="title-container">
-          <h4>Reviews</h4>
-          <h2>What People Say About Us</h2>
-        </div>
-        <div class="reviews-container">
-          <div class="card review-1">
-            <div class="review-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, lectus vel convallis
-                consectetur, velit mi vehicula risus, sed pretium velit neque id orci. </p>
-              <p>Morbi aliquet purus vitae interdum aliquam. Proin quis augue eros. Ut quis ante et enim ultricies
-                facilisis ac eu tortor. Maecenas vitae euismod libero. Fusce porta mi tempus mollis commodo.
-              </p>
-            </div>
-            <div class="reviewer-container">
-              <div class="image-container">
-                <img src="assets/images/review-headshot.jpg" alt="">
-              </div>
-              <div class="text-container">
-                <p class="bold name">John Doe</p>
-                <p class="occupation">Homeowner</p>
-              </div>
-            </div>
-          </div>
-          <div class="card review-2">
-            <div class="review-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, lectus vel convallis consectetur.
-              </p>
-              <p>Fusce feugiat maximus nunc, pharetra imperdiet elit pellentesque vel. Suspendisse et urna malesuada,
-                suscipit erat non, tincidunt diam. Pellentesque justo metus, maximus et sodales sit amet, luctus et
-                tortor</p>
-            </div>
-            <div class="reviewer-container">
-              <div class="image-container">
-                <img src="assets/images/review-headshot.jpg" alt="">
-              </div>
-              <div class="text-container">
-                <p class="bold name">John Doe</p>
-                <p class="occupation">Homeowner</p>
-              </div>
-            </div>
-          </div>
-          <div class="card review-3">
-            <div class="review-text">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam mattis, lectus vel convallis
-                consectetur, velit mi vehicula risus, sed pretium velit neque id orci. </p>
-              <p>Donec tempor eleifend faucibus. Nulla finibus orci at efficitur ultricies. Donec luctus odio vitae enim
-                tristique, mollis malesuada ex semper. Aenean orci augue, accumsan id iaculis id, commodo id erat. Nunc
-                in velit id orci cursus ultrices.</p>
-            </div>
-            <div class="reviewer-container">
-              <div class="image-container">
-                <img src="assets/images/review-headshot.jpg" alt="">
-              </div>
-              <div class="text-container">
-                <p class="bold name">John Doe</p>
-                <p class="occupation">Homeowner</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    <section id="footer-hero">
-      <div class="container">
-        <h2>Title About Getting in Touch Today</h2>
-        <p>
-          Tagline to get the user to visit the contact page and get in touch or get a quote etc.
-        </p>
-        <a href="#" class="button">Contact Us</a>
-      </div>
-    </section>
-    <footer>
-      <div class="container">
-        <div class="logo">
-          <img src="assets/svg/logo.svg" alt="">
-          <span class="bold">LOGO</span>
-        </div>
-        <div class="menus">
-          <div class="menu menu-1">
-            <span class="menu-title bold">Menu</span>
-            <ul class="footer-menu">
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Contact</a></li>
-            </ul>
-          </div>
-          <div class="menu menu-2">
-            <span class="menu-title bold">Contact</span>
-            <ul class="footer-menu">
-              <li>
-                <p>123 Example Street</p>
-                <p>City EX4 MPL</p>
+          <div class="social-links">
+            <ul>
+              <li class="social-link facebook">
+                <a href="#" target="_blank"
+                  ><img src="assets/svg/facebook.svg" alt=""
+                /></a>
               </li>
-              <li><a href="tel:01234567890">+44 1234 567 890</a></li>
-              <li><a href="mailto:example@example.com">example@example.com</a></li>
+              <li class="social-link instagram">
+                <a href="#" target="_blank"
+                  ><img src="assets/svg/instagram.svg" alt=""
+                /></a>
+              </li>
+              <li class="social-link twitter">
+                <a href="#" target="_blank"
+                  ><img src="assets/svg/twitter.svg" alt=""
+                /></a>
+              </li>
+              <li class="social-link youtube">
+                <a href="#" target="_blank"
+                  ><img src="assets/svg/youtube.svg" alt=""
+                /></a>
+              </li>
             </ul>
           </div>
-        </div>
-        <div class="social-links">
-          <ul>
-            <li class="social-link facebook"><a href="#" target="_blank"><img src="assets/svg/facebook.svg" alt=""></a>
-            </li>
-            <li class="social-link instagram"><a href="#" target="_blank"><img src="assets/svg/instagram.svg"
-                  alt=""></a></li>
-            <li class="social-link twitter"><a href="#" target="_blank"><img src="assets/svg/twitter.svg" alt=""></a>
-            </li>
-            <li class="social-link youtube"><a href="#" target="_blank"><img src="assets/svg/youtube.svg" alt=""></a>
-            </li>
-          </ul>
-        </div>
 
-        <div class="subfooter">
-          <div class="designer"><span>Designed and built by <a href="#" target="_blank">Adam Hills</a></span></div>
-          <div class="copyright"><span>&copy; Copyright</span></div>
+          <div class="subfooter">
+            <div class="designer">
+              <span
+                >Designed and built by
+                <a href="#" target="_blank">Adam Hills</a></span
+              >
+            </div>
+            <div class="copyright"><span>&copy; Copyright</span></div>
+          </div>
         </div>
-      </div>
-    </footer>
-  </main>
-  <script src="dist/js/scripts.min.js" type="module"></script>
-</body>
-
+      </footer>
+    </main>
+    <script src="dist/js/scripts.min.js" type="module"></script>
+  </body>
 </html>
