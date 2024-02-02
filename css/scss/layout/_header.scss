@@ -101,6 +101,13 @@ header {
           position: relative;
           transition: color 0.2s ease;
 
+          @include screen(lg) {
+            opacity: 1;
+            font-size: 16px;
+            letter-spacing: 0.05em;
+            color: var(--c-white);
+          }
+
           &.active {
             &::after {
               width: 100%;
@@ -128,14 +135,6 @@ header {
             &:after {
               width: 100%;
             }
-          }
-
-          @include screen(lg) {
-            opacity: 1;
-            font-size: 18px;
-            text-transform: unset;
-            font-weight: 400;
-            color: var(--c-white);
           }
         }
       }

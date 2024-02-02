@@ -6,6 +6,7 @@ section#hero {
   background-size: cover;
   background-position: center;
   height: clamp(650px, 100dvh, 800px);
+  min-height: 100dvh;
 
   &::before {
     content: "";
@@ -64,6 +65,7 @@ section#hero {
   &.alt-hero {
     height: clamp(250px, 100dvh, 400px);
     background-image: url(assets/images/project-example4.jpg);
+    min-height: unset;
 
     @include screen(lg) {
       height: clamp(350px, 100dvh, 500px);
