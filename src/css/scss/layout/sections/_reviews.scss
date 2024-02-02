@@ -1,0 +1,97 @@
+@use "../../abstracts" as *;
+
+section#reviews {
+  background: var(--c-alt-background);
+
+  .container {
+    .title-container {
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      margin-bottom: var(--site-padding-bottom);
+    }
+
+    .reviews-container {
+      max-width: 80rem;
+      margin: 0 auto;
+
+      @include screen(lg) {
+        max-width: 120rem;
+      }
+
+      .card {
+        display: grid;
+        grid-template-rows: 1fr auto;
+        background: var(--c-white);
+        max-width: 38rem;
+        transition: 0.2s ease;
+        padding: 20px;
+        flex: 1;
+        margin: 0 auto;
+
+        @include screen(md) {
+          margin: unset;
+        }
+
+        .review-text {
+          position: relative;
+          height: fit-content;
+
+          &::after {
+            content: "";
+            position: absolute;
+            bottom: -1em;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--c-brand);
+          }
+
+          p {
+            line-height: 1.4;
+          }
+        }
+
+        .reviewer-container {
+          display: flex;
+          gap: 10px;
+          align-items: center;
+          margin-top: 40px;
+
+          .image-container {
+            border-radius: 50%;
+            overflow: hidden;
+            height: 6rem;
+            width: 6rem;
+
+            img {
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+
+          .text-container {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+
+            p {
+              margin: 0;
+
+              &.name {
+                font-size: 1.4rem;
+              }
+
+              &.occupation {
+                font-size: 1.2rem;
+                color: var(--c-alt-text);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

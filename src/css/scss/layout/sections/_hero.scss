@@ -1,0 +1,81 @@
+@use "../../abstracts" as *;
+
+section#hero {
+  position: relative;
+  background-image: url(/assets/images/hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  height: max(650px, 100dvh);
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .hero-content {
+    position: relative;
+    top: 50px;
+    height: calc(100% - 50px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: var(--gap);
+    color: var(--c-white);
+    text-align: center;
+    padding: var(--site-padding);
+    max-width: 80rem;
+    margin: 0 auto;
+
+    @include screen(lg) {
+      max-width: 120rem;
+    }
+
+    h1 {
+      position: relative;
+
+      &::after {
+        content: "";
+        width: 100px;
+        height: 4px;
+        background: var(--c-brand);
+        position: absolute;
+        bottom: -0.5em;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+      }
+    }
+
+    p {
+      font-size: var(--fs-subtitle);
+      line-height: var(--lh-subtitle);
+      margin: 0 auto;
+      max-width: 50rem;
+
+      @include screen(lg) {
+        max-width: 70rem;
+      }
+    }
+  }
+
+  &.alt-hero {
+    height: clamp(250px, 100dvh, 400px);
+    background-image: url(/assets/images/project-example4.jpg);
+
+    @include screen(lg) {
+      height: clamp(350px, 100dvh, 500px);
+    }
+
+    h1 {
+      &::after {
+        content: unset;
+      }
+    }
+  }
+}

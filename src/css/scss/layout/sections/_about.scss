@@ -1,0 +1,175 @@
+@use "../../abstracts" as *;
+
+section#about {
+  .container {
+    max-width: 1500px;
+    margin: 0 auto;
+  }
+
+  .about-section {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 7rem;
+    scroll-margin-top: 7rem;
+    margin-bottom: 10rem;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+
+    @include screen(md) {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      scroll-margin-top: 15rem;
+    }
+
+    .image-container {
+      position: relative;
+      min-height: 500px;
+      width: calc(100% - 1em);
+
+      @include screen(md) {
+        min-height: unset;
+      }
+
+      @include screen(lg) {
+        min-height: 500px;
+      }
+
+      &::before {
+        position: absolute;
+        content: "";
+        width: 40%;
+        height: 40%;
+        border-top: 2px solid var(--c-brand);
+        border-right: 2px solid var(--c-brand);
+        top: -1em;
+        right: -1em;
+      }
+
+      .back-image-container {
+        width: 80%;
+        height: 90%;
+        margin-left: auto;
+
+        @include screen(md) {
+          width: 90%;
+        }
+
+        @include screen(lg) {
+          width: 80%;
+        }
+      }
+
+      .front-image-container {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 70%;
+        height: 55%;
+
+        @include screen(md) {
+          width: 80%;
+        }
+
+        @include screen(md) {
+          width: 70%;
+        }
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .text-container {
+      max-width: 550px;
+
+      @include screen(lg) {
+        max-width: 500px;
+      }
+
+      h2 {
+        margin-bottom: 0.5em;
+      }
+
+      h3 {
+        text-transform: unset;
+        letter-spacing: 0.05em;
+        font-size: 1.8rem;
+        margin-bottom: 1em;
+      }
+
+      p {
+        color: var(--c-alt-text);
+      }
+
+      .button-container {
+        display: flex;
+        gap: 30px;
+        margin-top: 2em;
+
+        .button {
+          width: 50%;
+          max-width: 200px;
+          padding-left: 10px;
+          padding-right: 10px;
+          text-wrap: nowrap;
+        }
+      }
+    }
+
+    .list {
+      margin-top: 1em;
+
+      ul {
+        li {
+          list-style-type: none;
+          color: var(--c-alt-text);
+          position: relative;
+
+          &::before {
+            content: "";
+            width: 1rem;
+            height: 1rem;
+            background: var(--c-brand);
+            position: absolute;
+            top: 50%;
+            left: -1.5em;
+            transform: translateY(-50%) rotate(45deg);
+          }
+        }
+      }
+    }
+
+    &:nth-of-type(even) {
+      margin-left: 1em;
+
+      .text-container {
+        order: 2;
+      }
+
+      .image-container {
+        &::before {
+          border-left: 2px solid var(--c-brand);
+          border-right: none;
+          right: unset;
+          top: -1em;
+          left: -1em;
+        }
+
+        .back-image-container {
+          margin-left: unset;
+          margin-right: auto;
+        }
+
+        .front-image-container {
+          left: unset;
+          right: 0;
+        }
+      }
+    }
+  }
+}

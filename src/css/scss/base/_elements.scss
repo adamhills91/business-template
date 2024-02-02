@@ -1,0 +1,15 @@
+@use "../abstracts" as *;
+
+html {
+  scroll-behavior: smooth;
+  font-style: normal;
+  text-rendering: optimizeLegibility;
+  font-size: 62.5%;
+}
+
+body {
+  color: var(--c-text);
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+  background: var(--c-background);
+}

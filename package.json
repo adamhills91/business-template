@@ -1,10 +1,17 @@
 {
   "scripts": {
-    "build": "esbuild js/scripts.js --bundle --minify --outfile=dist/js/scripts.min.js --format=cjs",
-    "watch": "npm run build -- --watch"
+    "sass:watch": "sass --watch --style=compressed src/css/scss:src",
+    "sass:build": "sass --style=compressed src/css/scss:src",
+    "esbuild:watch": "esbuild --watch src/js/scripts.js --bundle --minify --outfile=src/js/scripts.min.js --format=cjs",
+    "esbuild:build": "esbuild src/js/scripts.js --bundle --minify --outfile=src/js/scripts.min.js --format=cjs",
+    "eleventy:watch": "eleventy --serve",
+    "eleventy:build": "eleventy",
+    "start": "npm-run-all --parallel sass:watch esbuild:watch eleventy:watch"
   },
   "devDependencies": {
-    "esbuild": "^0.20.0"
+    "@11ty/eleventy": "^2.0.1",
+    "esbuild": "^0.20.0",
+    "npm-run-all": "^4.1.5"
   },
   "dependencies": {
     "gsap": "^3.12.5",
