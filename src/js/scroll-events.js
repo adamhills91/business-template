@@ -54,29 +54,44 @@ if (document.querySelector("#project-examples")) {
 if (document.querySelector(".about-section")) {
   const aboutSections = document.querySelectorAll(".about-section");
 
-  aboutSections.forEach((section, index) => {
-    gsap.from(section.children[0], {
-      x: index % 2 === 0 ? -100 : 100,
-      opacity: 0,
-      duration: 2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: section,
-        start: "top center+=25%",
-      },
-    });
+  let mm = gsap.matchMedia();
+  const breakPoint = 1024;
 
-    gsap.from(section.children[1], {
-      x: index % 2 === 0 ? 100 : -100,
-      opacity: 0,
-      duration: 2,
-      ease: "power3.out",
-      scrollTrigger: {
-        trigger: section,
-        start: "top center+=25%",
-      },
-    });
-  });
+  mm.add(
+    {
+      isDesktop: `(min-width: ${breakPoint}px)`,
+      isMobile: `(max-width: ${breakPoint - 1}px)`,
+    },
+    (context) => {
+      let { isDesktop, isMobile } = context.conditions;
+
+      aboutSections.forEach((section, index) => {
+        for (let i = 0; i < section.children.length; i++) {
+          gsap.from(section.children[i], {
+            x: () => {
+              if (isDesktop && i % 2 === 0) {
+                return index % 2 === 0 ? -100 : 100;
+              } else if (isDesktop) {
+                return index % 2 === 0 ? 100 : -100;
+              }
+            },
+            y: () => {
+              if (isMobile) {
+                return 50;
+              }
+            },
+            opacity: 0,
+            duration: 2,
+            ease: "power3.out",
+            scrollTrigger: {
+              trigger: section.children[i],
+              start: "top center+=25%",
+            },
+          });
+        }
+      });
+    }
+  );
 }
 
 if (document.querySelector("#reviews")) {
@@ -175,7 +190,7 @@ if (document.querySelector("#contact")) {
     ease: "power3.out",
     stagger: 0.2,
     scrollTrigger: {
-      trigger: formContainer,
+      trigger: contactCards,
       start: "top center+=25%",
     },
   });

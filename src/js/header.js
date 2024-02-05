@@ -12,34 +12,38 @@ const hero = document.querySelector("#hero");
 let mm = gsap.matchMedia();
 
 mm.add("(min-width: 1024px)", () => {
-  ScrollTrigger.create({
-    trigger: hero,
-    start: "top top-=25%",
-    onEnter: () => {
-      header.classList.add("scrolled");
-    },
-    onLeaveBack: () => {
-      header.classList.remove("scrolled");
-    },
-  });
+  if (document.querySelector("#hero")) {
+    ScrollTrigger.create({
+      trigger: hero,
+      start: "top top-=25%",
+      onEnter: () => {
+        header.classList.add("scrolled");
+      },
+      onLeaveBack: () => {
+        header.classList.remove("scrolled");
+      },
+    });
+  } else {
+    header.classList.add("scrolled");
+  }
 });
 
 //---------------------------------------
 // Add active class to current page
 //---------------------------------------
 
-const currentPageUrl = window.location.href;
-console.log(currentPageUrl);
+const currentPageUrl = new URL(window.location.href).pathname;
 
 const navLinks = document.querySelectorAll("nav a");
 
 navLinks.forEach((link) => {
-  let linkHref = link.href;
-  if (!linkHref.endsWith("/")) {
-    linkHref += "/";
+  let linkPath = new URL(link.href).pathname;
+
+  if (!linkPath.endsWith("/")) {
+    linkPath += "/";
   }
 
-  if (linkHref === currentPageUrl) {
+  if (linkPath === currentPageUrl) {
     link.classList.add("active");
   }
 });

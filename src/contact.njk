@@ -14,7 +14,9 @@ description: 'The contact page in a website template for a small business'
     <div class="container">
       <div class="contact-card email">
         <div class="icon-container">
-          <img src="/assets/svg/email.svg" alt="" />
+          <a href="mailto:example@example.com">
+            <img src="/assets/svg/email.svg" alt=""/>
+          </a>
         </div>
         <span class="contact-info">
           <a href="mailto:example@example.com">example@example.com</a>
@@ -22,7 +24,9 @@ description: 'The contact page in a website template for a small business'
       </div>
       <div class="contact-card phone">
         <div class="icon-container">
-          <img src="/assets/svg/phone.svg" alt="" />
+          <a href="tel:01234567890">
+            <img src="/assets/svg/phone.svg" alt=""/>
+          </a>
         </div>
         <span class="contact-info">
           <a href="tel:01234567890">+44 1234 567 890</a>
@@ -30,7 +34,7 @@ description: 'The contact page in a website template for a small business'
       </div>
       <div class="contact-card address">
         <div class="icon-container">
-          <img src="/assets/svg/location.svg" alt="" />
+          <img src="/assets/svg/location.svg" alt=""/>
         </div>
         <span class="contact-info">
           123 Example Street, City EX4 MPL
@@ -50,27 +54,27 @@ description: 'The contact page in a website template for a small business'
           name="name"
           placeholder="Name"
           required
-        />
+/>
         <input
           type="email"
           class="email"
           name="email"
           placeholder="Email Address"
           required
-        />
+/>
         <input
           type="tel"
           class="phone"
           name="phone"
           placeholder="Phone Number"
-        />
+/>
         <input
           type="text"
           class="subject"
           name="subject"
           placeholder="Subject"
           required
-        />
+/>
         <textarea
           name="message"
           class="message"
